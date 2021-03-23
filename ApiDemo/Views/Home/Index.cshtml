@@ -1,0 +1,62 @@
+﻿@model XmlModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+@section Styles {
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+}
+<div>
+    @Html.Raw(ViewBag.data)
+    
+    <table class="table table-bordered table-striped m-1 p-1">
+        <tr>
+            <th>WebSiteUrl</th>
+            <th>PartyIdentifacition</th>
+            <th>PartyName</th>
+            <th>PostalAddress</th>
+            <th>PartyTaxSchema</th>
+            <th>Phone</th>
+            <th>Fax</th>
+            <th>Mail</th>
+
+        </tr>
+        <tr>
+            <td>@Model.WebSiteUrl</td>
+            <td>@Model.PartyIdentifacition</td>
+            <td>@Model.PartyName</td>
+            <td>@Model.PostalAddress</td>
+            <td>@Model.PartyTaxSchema</td>
+            <td>@Model.Phone</td>
+            <td>@Model.Fax</td>
+            <td>@Model.Mail</td>
+
+        </tr>
+
+    </table>
+    <br />
+    <h1 class="text-center">Müşteri Bilgileri</h1>
+    <table class="table table-bordered table-striped m-1 p-1">
+        <tr>
+            <th>ID</th>
+            <th>Adı</th>
+            <th>Adresi</th>
+            <th>Vergi</th>
+            <th>Telefon</th>
+            <th>Fax</th>
+        </tr>
+        <tr>
+            <td>@Model.CompanyId</td>
+            <td>@Model.CompanyName</td>
+            <td>@Model.CompanyAddress</td>
+            <td>@Model.CompanyTax</td>
+            <td>@Model.CompanyPhone</td>
+            <td>@Model.CompanyFax</td>
+           
+
+        </tr>
+
+
+    </table>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
